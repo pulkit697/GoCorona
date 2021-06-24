@@ -24,5 +24,4 @@
         app:menu="@menu/nav_bar_menu"
 
         />
-
 </LinearLayout>
