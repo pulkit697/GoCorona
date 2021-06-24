@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/stay_at_home"/>
+    <item
+        android:id="@+id/XRayScanFragment"
+        android:title="Scan X Ray"
+        android:icon="@drawable/x_ray_black"
+        android:visible="true"/>
+    <item
+        android:id="@+id/XRayReviewFragment"
+        android:title="Review X rays"
+        android:icon="@drawable/review"
+        android:visible="true"/>
+    <item
+        android:id="@+id/aboutFragment"
+        android:title="About us"
+        android:icon="@drawable/about"/>
+</menu>
