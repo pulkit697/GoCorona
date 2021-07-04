@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_XRayScanFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_XRayScanFragment_to_historyMyXRaysFragment"
+            app:destination="@id/historyMyXRaysFragment" />
     </fragment>
     <fragment
         android:id="@+id/XRayReviewFragment"
@@ -58,5 +61,14 @@
         <action
             android:id="@+id/action_aboutFragment_to_XRayReviewFragment"
             app:destination="@id/XRayReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyMyXRaysFragment"
+        android:name="dev.pulkit.gocorona.ui.fragments.HistoryMyXRaysFragment"
+        android:label="fragment_history_my_x_rays"
+        tools:layout="@layout/fragment_history_my_x_rays" >
+        <action
+            android:id="@+id/action_historyMyXRaysFragment_to_XRayScanFragment"
+            app:destination="@id/XRayScanFragment" />
     </fragment>
 </navigation>

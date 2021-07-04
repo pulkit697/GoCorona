@@ -6,12 +6,12 @@
         android:icon="@drawable/stay_at_home"/>
     <item
         android:id="@+id/XRayScanFragment"
-        android:title="Scan X Ray"
+        android:title="Scan CT Scan"
         android:icon="@drawable/x_ray_black"
         android:visible="true"/>
     <item
         android:id="@+id/XRayReviewFragment"
-        android:title="Review X rays"
+        android:title="Review CT scans"
         android:icon="@drawable/review"
         android:visible="true"/>
     <item

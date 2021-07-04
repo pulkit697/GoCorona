@@ -7,6 +7,29 @@
     android:orientation="vertical"
     android:weightSum="1"
     tools:context=".ui.MainActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        android:paddingBottom="1px"
+        >
+        <ImageView
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@mipmap/app_icon"
+            android:background="@color/white"
+            />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/black"
+            android:background="@color/white"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
     <fragment
         android:id="@+id/fragMainActivity"
         android:layout_width="match_parent"

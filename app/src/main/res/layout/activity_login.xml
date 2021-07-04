@@ -48,7 +48,9 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you a corona specialist doctor?"/>
+        android:text="Are you a corona specialist doctor?"
+        android:buttonTint="@color/purple_500"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
