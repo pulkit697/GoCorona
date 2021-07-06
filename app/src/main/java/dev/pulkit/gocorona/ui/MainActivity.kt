@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import dev.pulkit.gocorona.R
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_x_ray_scan.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    fun navigateToHistoryFragment(view: View) {
+    fun navigateToHistoryFragment(view:View) {
         navController.navigate(R.id.action_XRayScanFragment_to_historyMyXRaysFragment)
     }
 }

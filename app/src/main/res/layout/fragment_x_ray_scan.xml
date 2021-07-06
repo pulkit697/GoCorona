@@ -49,6 +49,27 @@
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFragXRayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="10dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFragXRayPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:scrollbars="vertical"
+            android:hint="Person's Name"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -65,9 +86,43 @@
             android:layout_height="wrap_content"
             android:lines="5"
             android:scrollbars="vertical"
+            android:hint="Some description...(optional)"
+            android:gravity="top"
         />
     </com.google.android.material.textfield.TextInputLayout>
     </ScrollView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btFragXRaySubmitImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Submit"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.MyApp.SmallComponent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFragXRayMLReportBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="10dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvFragXRayMLReportOfCTScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:lines="1"
+            android:scrollbars="vertical"
+            android:text="Processing..."
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,6 +133,7 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tvFragXRayHistory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
