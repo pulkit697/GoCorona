@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_homeFragment_to_govtGuidelinesPDFFragment"
             app:destination="@id/govtGuidelinesPDFFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_isolationHelpersFragment"
+            app:destination="@id/isolationHelpersFragment" />
     </fragment>
     <fragment
         android:id="@+id/XRayScanFragment"
@@ -93,6 +96,15 @@
         tools:layout="@layout/fragment_govt_guidelines_p_d_f" >
         <action
             android:id="@+id/action_govtGuidelinesPDFFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/isolationHelpersFragment"
+        android:name="dev.pulkit.gocorona.ui.fragments.IsolationHelpersFragment"
+        android:label="fragment_isolation_helpers"
+        tools:layout="@layout/fragment_isolation_helpers" >
+        <action
+            android:id="@+id/action_isolationHelpersFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

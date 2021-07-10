@@ -38,4 +38,7 @@ class MainActivity : AppCompatActivity() {
     fun navigateToGuidelinesFragment(view:View){
         navController.navigate(R.id.action_homeFragment_to_govtGuidelinesPDFFragment)
     }
+    fun navigateToIsolationHelper(view:View){
+        navController.navigate(R.id.action_homeFragment_to_isolationHelpersFragment)
+    }
 }

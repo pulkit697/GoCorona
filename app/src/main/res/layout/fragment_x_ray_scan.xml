@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Submit"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.MyApp.SmallComponent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.MyApp.PetalDesign"
         />
 
     <com.google.android.material.textfield.TextInputLayout
