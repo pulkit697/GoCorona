@@ -2,4 +2,20 @@
     <string name="app_name">Go Corona</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mask_guidelines">
+        There are two types of masks which are recommended by Ministry of Health and Family Affairs, India for
+    various categories of personnel working in hospital or community settings, depending upon the work
+    environment: \n
+    1. Triple layer medical mask \n
+    2. N-95 Respirator mask \n
+    </string>
+    <string name="triple_mask">
+    A triple layer medical mask is a disposable mask, fluid-resistant, provide protection to the wearer
+    from droplets of infectious material emitted during coughing/sneezing/talking.
+    </string>
+    <string name="n95_mask">
+    An N-95 respirator mask is a respiratory protective device with high filtration efficiency to airborne
+    particles. To provide the requisite air seal to the wearer, such masks are designed to achieve a very
+    close facial fit.
+</string>
 </resources>

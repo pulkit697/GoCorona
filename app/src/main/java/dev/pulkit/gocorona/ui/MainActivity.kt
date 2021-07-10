@@ -32,4 +32,10 @@ class MainActivity : AppCompatActivity() {
     fun navigateToHistoryFragment(view:View) {
         navController.navigate(R.id.action_XRayScanFragment_to_historyMyXRaysFragment)
     }
+    fun navigateToMaskFragment(view:View){
+        navController.navigate(R.id.action_homeFragment_to_maskFragment)
+    }
+    fun navigateToGuidelinesFragment(view:View){
+        navController.navigate(R.id.action_homeFragment_to_govtGuidelinesPDFFragment)
+    }
 }

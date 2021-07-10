@@ -12,7 +12,9 @@
         android:id="@+id/cvFragHomeCityCases"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="7dp"
+        android:layout_marginHorizontal="10dp"
         app:cardElevation="5dp"
         app:layout_constraintEnd_toStartOf="@+id/cvFragHomeCountryCases"
         app:layout_constraintHorizontal_bias="0.5"
@@ -22,7 +24,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="15dp">
 
             <TextView
                 android:id="@+id/tvFragHomeCityCases"
@@ -43,8 +45,10 @@
         android:id="@+id/cvFragHomeCountryCases"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="10dp"
         app:cardElevation="5dp"
+        app:cardCornerRadius="7dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cvFragHomeCityCases"
@@ -53,7 +57,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:padding="15dp">
 
             <TextView
                 android:id="@+id/tvFragHomeCountryCases"
@@ -74,7 +78,7 @@
         android:id="@+id/ivFragHomeGetOxygen"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/o2_cylinder"
+        android:src="@drawable/buy_oxygen"
         android:scaleType="center"
         android:padding="25dp"
         app:layout_constraintDimensionRatio="1"
@@ -97,16 +101,16 @@
         app:layout_constraintDimensionRatio="1"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView"
         app:layout_constraintBottom_toTopOf="@id/glFragHomeHorizontalSeparation"
-        app:layout_constraintEnd_toStartOf="@id/iv02"
+        app:layout_constraintEnd_toStartOf="@id/ivFragHomeCTScan"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivFragHomeGetOxygen"
         app:layout_constraintTop_toBottomOf="@id/cvFragHomeCityCases" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv02"
+        android:id="@+id/ivFragHomeCTScan"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/x_ray_color"
+        android:src="@drawable/ct_scan"
         android:scaleType="center"
         android:padding="25dp"
         app:layout_constraintDimensionRatio="1"
@@ -122,90 +126,92 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/black"
-        app:layout_constraintGuide_percent="0.35"
         android:orientation="horizontal"
-        />
+        app:layout_constraintGuide_percent="0.4" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv10"
+        android:id="@+id/ivFragHomeCoronaCount"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/corona_graph"
         android:scaleType="center"
         android:padding="25dp"
+
         app:layout_constraintDimensionRatio="1"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView"
-        app:layout_constraintBottom_toTopOf="@+id/iv20"
-        app:layout_constraintEnd_toStartOf="@+id/iv11"
+        app:layout_constraintBottom_toTopOf="@+id/ivFragHomeBuyMask"
+        app:layout_constraintEnd_toStartOf="@+id/ivFragHomePMReliefFund"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation"/>
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv11"
+        android:id="@+id/ivFragHomePMReliefFund"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/corona_graph"
+        android:src="@drawable/india"
         android:scaleType="center"
         android:padding="25dp"
         app:layout_constraintDimensionRatio="1"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView"
-        app:layout_constraintBottom_toTopOf="@+id/iv21"
-        app:layout_constraintEnd_toStartOf="@+id/iv12"
+        app:layout_constraintBottom_toTopOf="@+id/ivFragHomeGovtGuidelines"
+        app:layout_constraintEnd_toStartOf="@+id/ivFragHomeBookVaccine"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/iv10"
+        app:layout_constraintStart_toEndOf="@+id/ivFragHomeCoronaCount"
         app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv12"
+        android:id="@+id/ivFragHomeBookVaccine"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/corona_graph"
+        android:src="@drawable/vaccine"
         android:scaleType="center"
         android:padding="25dp"
         app:layout_constraintDimensionRatio="1"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView"
-        app:layout_constraintBottom_toTopOf="@+id/iv22"
+        app:layout_constraintBottom_toTopOf="@+id/ivFragHomeIsolationRequirements"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/iv11"
+        app:layout_constraintStart_toEndOf="@+id/ivFragHomePMReliefFund"
         app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv20"
+        android:id="@+id/ivFragHomeBuyMask"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/corona_graph"
+        android:src="@drawable/mask"
         android:scaleType="center"
         android:padding="25dp"
+        android:onClick="navigateToMaskFragment"
         app:layout_constraintDimensionRatio="1"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView"
         app:layout_constraintBottom_toBottomOf="@id/glFragHomeHorizontalBelowGrid"
-        app:layout_constraintEnd_toStartOf="@+id/iv21"
+        app:layout_constraintEnd_toStartOf="@+id/ivFragHomeGovtGuidelines"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv10" />
+        app:layout_constraintTop_toBottomOf="@+id/ivFragHomeCoronaCount" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv21"
+        android:id="@+id/ivFragHomeGovtGuidelines"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/corona_graph"
+        android:src="@drawable/govt_guidelines"
         android:scaleType="center"
         android:padding="25dp"
         app:layout_constraintDimensionRatio="1"
+        android:onClick="navigateToGuidelinesFragment"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView"
         app:layout_constraintBottom_toBottomOf="@id/glFragHomeHorizontalBelowGrid"
-        app:layout_constraintEnd_toStartOf="@+id/iv22"
+        app:layout_constraintEnd_toStartOf="@+id/ivFragHomeIsolationRequirements"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/iv20"
-        app:layout_constraintTop_toBottomOf="@+id/iv11" />
+        app:layout_constraintStart_toEndOf="@+id/ivFragHomeBuyMask"
+        app:layout_constraintTop_toBottomOf="@+id/ivFragHomePMReliefFund" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv22"
+        android:id="@+id/ivFragHomeIsolationRequirements"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/corona_graph"
+        android:src="@drawable/isolation_needs"
         android:scaleType="center"
         android:padding="25dp"
         app:layout_constraintDimensionRatio="1"
@@ -213,15 +219,30 @@
         app:layout_constraintBottom_toBottomOf="@id/glFragHomeHorizontalBelowGrid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/iv21"
-        app:layout_constraintTop_toBottomOf="@+id/iv12" />
+        app:layout_constraintStart_toEndOf="@+id/ivFragHomeGovtGuidelines"
+        app:layout_constraintTop_toBottomOf="@+id/ivFragHomeBookVaccine" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glFragHomeHorizontalBelowGrid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.70"
+        app:layout_constraintGuide_percent="0.75"
         />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivFragHomeSellOxygen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1"
+        android:src="@drawable/sell_oxygen"
+        android:layout_marginTop="15dp"
+        android:scaleType="center"
+        android:padding="25dp"
+        
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView"
+        app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalBelowGrid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeGovtGuidelines"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeGovtGuidelines"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

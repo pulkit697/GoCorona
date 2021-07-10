@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.MaskFragment"
+    android:layout_marginHorizontal="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alike"
+        android:text="@string/mask_guidelines"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Triple Layer Medical Mask"
+        android:layout_marginTop="20dp"
+        android:textSize="22sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/antic"
+        android:text="@string/triple_mask" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btFragMaskBuyTripleMask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="Buy now"
+        android:textColor="@color/black"
+        app:strokeColor="@color/black"
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="N95 Respirator Mask"
+        android:layout_marginTop="20dp"
+        android:textSize="22sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/n95_mask"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/antic"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btFragMaskBuyN95Mask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="Buy now"
+        android:textColor="@color/black"
+        app:strokeColor="@color/black"
+        android:gravity="left"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>
