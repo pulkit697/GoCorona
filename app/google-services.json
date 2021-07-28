@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "721499889181",
+    "project_id": "go-corona-summer-intern",
+    "storage_bucket": "go-corona-summer-intern.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721499889181:android:cc14892a2db051abcef0f4",
+        "android_client_info": {
+          "package_name": "dev.pulkit.gocorona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721499889181-vauhd0gjsbnb064qs8h1d4sd7e04uqnn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3tJJW6nk5m4FjdOAGf06TVSxZVNGOTDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721499889181-vauhd0gjsbnb064qs8h1d4sd7e04uqnn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

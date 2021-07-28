@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.LoginActivity"
-    android:gravity="center"
+    tools:context=".ui.LoginActivity">
+    <LinearLayout
+        android:id="@+id/llActivityLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
     >
     <TextView
         android:layout_width="wrap_content"
@@ -27,10 +32,12 @@
         android:layout_height="wrap_content"
         android:text="10-digit Mobile Number" />
     <EditText
+        android:id="@+id/etMobileNumberLoginActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="__________"
         android:lines="1"
+        android:inputType="phone"
         android:letterSpacing="1.3"
         android:layout_marginBottom="15dp"
         android:maxLength="10"/>
@@ -52,21 +59,30 @@
         android:buttonTint="@color/purple_500"
         />
     <Button
+        android:id="@+id/btSendOtpLoginActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send OTP"
         android:layout_marginBottom="15dp"
         android:textAllCaps="false"/>
     <EditText
+        android:id="@+id/etEnteredOtpLoginActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:hint="______"
+        android:inputType="number"
         android:letterSpacing="1.3"/>
     <Button
-        android:id="@+id/btLoggedIn"
+        android:id="@+id/btVerifyOtpLoginActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Verify and Proceed"
         android:textAllCaps="false"/>
 </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pbActivityLogin"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"/>
+</FrameLayout>
