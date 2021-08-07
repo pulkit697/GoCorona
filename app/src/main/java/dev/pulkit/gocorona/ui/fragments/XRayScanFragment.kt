@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import dev.pulkit.gocorona.R
@@ -13,7 +14,6 @@ import kotlinx.android.synthetic.main.fragment_x_ray_scan.*
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
-import java.nio.ByteBuffer
 
 class XRayScanFragment : Fragment(R.layout.fragment_x_ray_scan) {
 
@@ -32,15 +32,15 @@ class XRayScanFragment : Fragment(R.layout.fragment_x_ray_scan) {
         }
     }
 
-    fun getMLReport() {
+    private fun getMLReport() {
         tilFragXRayMLReportBox.visibility = View.VISIBLE
         tvFragXRayMLReportOfCTScan.setText("Processing...")
         tvFragXRayMLReportOfCTScan.setCompoundDrawablesWithIntrinsicBounds(null,null,null,null)
         /* get report from ml model */
         try {
             val model = TfLiteModel.newInstance(requireContext())
-            img = Bitmap.createScaledBitmap(img,1,1,true)
-            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 1, 1, 3), DataType.FLOAT32)
+            img = Bitmap.createScaledBitmap(img,224,224,true)
+            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
             val tensorImage = TensorImage(DataType.FLOAT32)
             tensorImage.load(img)
             val byteBuffer = tensorImage.buffer
@@ -49,18 +49,27 @@ class XRayScanFragment : Fragment(R.layout.fragment_x_ray_scan) {
             val outputs = model.process(inputFeature0)
             val outputFeature0 = outputs.outputFeature0AsTensorBuffer
             model.close()
-
-            tvFragXRayMLReportOfCTScan.setText(" Result: " + outputFeature0.floatArray[0])
+            Log.d("pulkit","" + outputFeature0.floatArray.contentToString())
+            val nonCovid = outputFeature0.floatArray[1]
+            val covid = outputFeature0.floatArray[0]
+            if(covid>nonCovid){
+                tvFragXRayMLReportOfCTScan.setText(" Result: Covid Positive")
+                tvFragXRayMLReportOfCTScan.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.ic_warn_red,0)
+            }else{
+                tvFragXRayMLReportOfCTScan.setText(" Result: All Okay! You are Safe")
+                tvFragXRayMLReportOfCTScan.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.ic_check_green,0)
+            }
         }
         catch (err:Error)
         {
             tvFragXRayMLReportOfCTScan.setText("" + err.message)
         }
-        tvFragXRayMLReportOfCTScan.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.ic_check_green,0)
 
     }
 
-    fun uploadXRayReport(){}
+    private fun uploadXRayReport(){
+
+    }
 
     private fun getImageFromGallery(){
         val i = Intent()
