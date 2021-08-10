@@ -18,10 +18,6 @@ class XRayReviewFragment : Fragment(R.layout.fragment_x_ray_review) {
 
     lateinit var result: ArrayList<CTScanPost>
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         GlobalScope.launch(Dispatchers.Main) {

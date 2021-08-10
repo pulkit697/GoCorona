@@ -1,11 +1,16 @@
 package dev.pulkit.gocorona.adapters
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import dev.pulkit.gocorona.R
 import dev.pulkit.gocorona.models.ctscan.CTScanPost
+import dev.pulkit.gocorona.models.ctscan.Comment
+import dev.pulkit.gocorona.ui.MainActivity
+import dev.pulkit.gocorona.ui.fragments.MyCTScanAllCommentsFragment
 import kotlinx.android.synthetic.main.list_item_view_history_x_rays.view.*
 
 class CTScanHistoryFragmentAdapter(private val list:ArrayList<CTScanPost>):RecyclerView.Adapter<CTScanHistoryFragmentAdapter.CTScanHistoryViewHolder>() {
@@ -20,7 +25,13 @@ class CTScanHistoryFragmentAdapter(private val list:ArrayList<CTScanPost>):Recyc
                 }else{
                     ivFragListHistoryMLReport.setImageResource(R.drawable.ic_check_green)
                 }
+                tvFragHistoryOpenComments.setOnClickListener { goToComments(itemView.context,ctScanPost.comments) }
             }
+        }
+
+        private fun goToComments(context: Context, comments: ArrayList<Comment>) {
+            val activity = context as MainActivity
+            activity.navigateToComments(comments)
         }
     }
 

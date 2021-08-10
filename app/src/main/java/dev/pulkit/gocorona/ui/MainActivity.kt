@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import dev.pulkit.gocorona.R
+import dev.pulkit.gocorona.models.ctscan.Comment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_x_ray_scan.*
 
@@ -40,5 +41,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun navigateToIsolationHelper(view:View){
         navController.navigate(R.id.action_homeFragment_to_isolationHelpersFragment)
+    }
+    fun navigateToComments(comments:ArrayList<Comment>){
+        val bundle = Bundle()
+        bundle.putSerializable("commentsList",comments)
+        navController.navigate(R.id.action_historyMyXRaysFragment_to_myCTScanAllCommentsFragment)
     }
 }
