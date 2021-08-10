@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.XRayReviewFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReviewFrag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Review X rays"
-        android:gravity="center"/>
+        tools:listitem="@layout/list_item_view_review_scan"
+        />
 
 </FrameLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ivCTScanPostReviewFrag"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btAllOkayReviewFrag"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:text="All Okay"
+        app:layout_constraintEnd_toStartOf="@+id/btShouldConsultReviewFrag"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCTScanPostReviewFrag" />
+
+    <Button
+        android:id="@+id/btShouldConsultReviewFrag"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:text="Consult doctor"
+        app:layout_constraintEnd_toStartOf="@+id/btUrgentReviewFrag"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btAllOkayReviewFrag"
+        app:layout_constraintTop_toBottomOf="@id/ivCTScanPostReviewFrag" />
+
+    <Button
+        android:id="@+id/btUrgentReviewFrag"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:text="Urgent checkup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btShouldConsultReviewFrag"
+        app:layout_constraintTop_toBottomOf="@id/ivCTScanPostReviewFrag" />
+    <EditText
+        android:id="@+id/etCommentReviewFrag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        style="@style/CardView.Light"
+        app:layout_constraintTop_toBottomOf="@id/btShouldConsultReviewFrag"
+        android:hint="write any comment..."
+        android:gravity="top"
+        android:layout_marginTop="2dp"
+        />
+    <ImageButton
+        android:id="@+id/btPostCommentReviewFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/send_comment"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/etCommentReviewFrag"
+        app:layout_constraintBottom_toBottomOf="@id/etCommentReviewFrag"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

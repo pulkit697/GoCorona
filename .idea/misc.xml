@@ -7,6 +7,10 @@
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/splash_background.xml" value="0.207421875" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/activity_login.xml" value="0.1953125" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_about.xml" value="0.1953125" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_history_my_x_rays.xml" value="0.137890625" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_x_ray_review.xml" value="0.1953125" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_view_history_x_rays.xml" value="0.2" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_view_review_scan.xml" value="0.1953125" />
       </map>
     </option>
   </component>

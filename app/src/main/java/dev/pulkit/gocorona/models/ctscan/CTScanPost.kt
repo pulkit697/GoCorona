@@ -1,3 +1,3 @@
 package dev.pulkit.gocorona.models.ctscan
 
-data class CTScanPost(val imageUrl:String,val timeStamp:Int,val userId:Int,val MlReport:Int,val comments:ArrayList<Comment>){}
+data class CTScanPost(val imageUrl:String,val timeStamp:String,val userId:String,val MlReport:String,val comments:ArrayList<Comment>){}

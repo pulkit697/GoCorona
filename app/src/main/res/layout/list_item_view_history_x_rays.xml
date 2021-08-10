@@ -4,8 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/solid_border"
-    android:layout_margin="5dp"
-    android:paddingVertical="5dp"
+    android:layout_margin="8dp"
+    android:paddingVertical="3dp"
     >
 
     <ImageView
@@ -16,49 +16,41 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/sample_ct_scan"
         android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@id/tvFragListHistorySeriousTreatment"
+        app:layout_constraintBottom_toTopOf="@id/tvFragHistoryOpenComments"
         />
     <TextView
-        android:id="@+id/tvFragListHistoryName"
+        android:id="@+id/tvFragListHistoryTimeStampText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="Time:"
         android:layout_margin="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/ivFragListHistoryCTScan"
         />
     <TextView
-        android:id="@+id/tvFragListHistoryDate"
+        android:id="@+id/tvFragListHistoryTimeStampAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date"
+        android:text="10-08-2021 08:53"
         android:layout_marginVertical="5dp"
-        app:layout_constraintLeft_toLeftOf="@id/tvFragListHistoryName"
-        app:layout_constraintTop_toBottomOf="@id/tvFragListHistoryName"/>
+        app:layout_constraintLeft_toLeftOf="@id/tvFragListHistoryTimeStampText"
+        app:layout_constraintTop_toBottomOf="@id/tvFragListHistoryTimeStampText"/>
     <TextView
-        android:id="@+id/tvFragListHistoryAllOk"
+        android:id="@+id/tvFragListHistoryMlReportText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Absolutely Okay: 80%"
+        android:text="Computer's Prediction:"
         android:layout_marginVertical="5dp"
-        app:layout_constraintLeft_toLeftOf="@id/tvFragListHistoryName"
-        app:layout_constraintTop_toBottomOf="@id/tvFragListHistoryDate"/>
+        app:layout_constraintLeft_toLeftOf="@id/tvFragListHistoryTimeStampText"
+        app:layout_constraintTop_toBottomOf="@id/tvFragListHistoryTimeStampAnswer"/>
     <TextView
-        android:id="@+id/tvFragListHistoryNeedsMedication"
+        android:id="@+id/tvFragListHistoryMlReportAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Needs medication: 17%"
+        android:text="All Okay! You are fine"
         android:layout_marginVertical="2dp"
-        app:layout_constraintLeft_toLeftOf="@id/tvFragListHistoryName"
-        app:layout_constraintTop_toBottomOf="@id/tvFragListHistoryAllOk"/>
-    <TextView
-        android:id="@+id/tvFragListHistorySeriousTreatment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Needs Serious treatment: 3%"
-        android:layout_marginVertical="2dp"
-        app:layout_constraintLeft_toLeftOf="@id/tvFragListHistoryName"
-        app:layout_constraintTop_toBottomOf="@id/tvFragListHistoryNeedsMedication"/>
+        app:layout_constraintLeft_toLeftOf="@id/tvFragListHistoryTimeStampText"
+        app:layout_constraintTop_toBottomOf="@id/tvFragListHistoryMlReportText"/>
 
     <ImageView
         android:id="@+id/ivFragListHistoryMLReport"
@@ -69,5 +61,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:src="@drawable/ic_check_green"/>
+    <TextView
+        android:id="@+id/tvFragHistoryOpenComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comments"
+        android:clickable="true"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        app:layout_constraintTop_toBottomOf="@id/tvFragListHistoryMlReportAnswer"
+        android:textSize="18sp"
+        android:padding="10dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

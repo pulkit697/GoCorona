@@ -8,4 +8,5 @@ import android.view.ViewGroup
 import dev.pulkit.gocorona.R
 
 class HistoryMyXRaysFragment : Fragment(R.layout.fragment_history_my_x_rays) {
+
 }
