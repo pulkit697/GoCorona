@@ -1,6 +1,7 @@
 package dev.pulkit.gocorona.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,7 @@ class MyCTScanAllCommentsFragment : Fragment(R.layout.fragment_my_c_t_scan_all_c
             comments = arguments?.getSerializable("commentsList") as ArrayList<Comment>
         }
         rvCommentsFrag.apply {
+            Log.d("pulkit","" + comments.size)
             adapter = AllCommentsAdapter(comments)
             layoutManager = LinearLayoutManager(requireContext())
         }

@@ -22,4 +22,11 @@ interface CtScanDao {
                             @Part("timeStamp") timeStamp:RequestBody,
                             @Part file: MultipartBody.Part):Response<ResponseMessage>
 
+    @Multipart
+    @POST("/feed/postmycomment")
+    suspend fun postMyComment(@Part("id") userId: RequestBody,
+                            @Part("time") timeStamp:RequestBody,
+                            @Part("doctorName") name:RequestBody,
+                            @Part("comment") caption:RequestBody,
+                            @Part("result") result:RequestBody):Response<ResponseMessage>
 }
