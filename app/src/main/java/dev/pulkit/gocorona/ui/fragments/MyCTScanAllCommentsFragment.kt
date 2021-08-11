@@ -17,7 +17,10 @@ class MyCTScanAllCommentsFragment : Fragment(R.layout.fragment_my_c_t_scan_all_c
         super.onViewCreated(view, savedInstanceState)
         var comments = arrayListOf<Comment>()
         if(arguments!=null){
+            Log.d("pulkit","arguments not null")
             comments = arguments?.getSerializable("commentsList") as ArrayList<Comment>
+        }else{
+            Log.d("pulkit","arguments null")
         }
         rvCommentsFrag.apply {
             Log.d("pulkit","" + comments.size)

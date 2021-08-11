@@ -4,10 +4,19 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:padding="5dp"
-    android:background="@drawable/solid_border">
+    android:orientation="vertical"
+    android:background="@drawable/petal_shape">
     <TextView
         android:id="@+id/tvCommentListItem"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="My comment is..."/>
+        android:layout_height="wrap_content"
+        android:text="My comment is..."
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/tvCommentListItemResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:text="Result:"/>
 </LinearLayout>

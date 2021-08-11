@@ -2,6 +2,7 @@ package dev.pulkit.gocorona.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -44,7 +45,8 @@ class MainActivity : AppCompatActivity() {
     }
     fun navigateToComments(comments:ArrayList<Comment>){
         val bundle = Bundle()
+        Log.d("pulkit","main Activity:" + comments.size)
         bundle.putSerializable("commentsList",comments)
-        navController.navigate(R.id.action_historyMyXRaysFragment_to_myCTScanAllCommentsFragment)
+        navController.navigate(R.id.action_historyMyXRaysFragment_to_myCTScanAllCommentsFragment,bundle)
     }
 }

@@ -2,6 +2,7 @@ package dev.pulkit.gocorona.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,6 +32,7 @@ class CTScanHistoryFragmentAdapter(private val list:ArrayList<CTScanPost>):Recyc
 
         private fun goToComments(context: Context, comments: ArrayList<Comment>) {
             val activity = context as MainActivity
+            Log.d("pulkit", "inside history: " + comments.size)
             activity.navigateToComments(comments)
         }
     }

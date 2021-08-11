@@ -10,7 +10,8 @@
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_history_my_x_rays.xml" value="0.137890625" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_my_c_t_scan_all_comments.xml" value="0.176" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_x_ray_review.xml" value="0.1953125" />
-        <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_comment.xml" value="0.10078125" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_x_ray_scan.xml" value="0.19305019305019305" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_comment.xml" value="0.4" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_view_history_x_rays.xml" value="0.2" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_view_review_scan.xml" value="0.1953125" />
       </map>

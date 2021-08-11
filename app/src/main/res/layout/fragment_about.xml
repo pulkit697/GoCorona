@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.fragments.AboutFragment">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="About us"
-        android:gravity="center"/>
+        android:textSize="26dp"
+        android:fontFamily="@font/antic"
+        android:gravity="start"
+        android:padding="10dp"/>
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text = "We are a group of softwar engineers and data scientists who have worked together to build an application that can help people survive if the 3rd wave of Corona hits.\n There are a lot of functionalities that are still left from being added, but soon will be made available to you."
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/alike"
+        />
+
+</LinearLayout>

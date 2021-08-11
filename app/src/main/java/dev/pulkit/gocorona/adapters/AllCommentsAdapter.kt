@@ -7,12 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.pulkit.gocorona.R
 import dev.pulkit.gocorona.models.ctscan.Comment
 import kotlinx.android.synthetic.main.fragment_my_c_t_scan_all_comments.view.*
+import kotlinx.android.synthetic.main.list_item_comment.view.*
 
 class AllCommentsAdapter(private val list:ArrayList<Comment>):RecyclerView.Adapter<AllCommentsAdapter.CommentViewHolder>() {
     class CommentViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
         fun onBind(comment: Comment)
         {
-            itemView.tvCommentBox.text = comment.caption
+            itemView.tvCommentListItem.text = comment.caption
+            itemView.tvCommentListItemResult.text = "Result: " + comment.result
         }
     }
 
