@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="fights"
-        android:textColor="#000080"
+        android:textColor="#ffffff"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/tvFragHomeCorona"
         app:layout_constraintHorizontal_bias="0.5"
@@ -125,6 +125,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvFragHomeCityCases"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivFragHomeHospitalBed"
         android:layout_width="0dp"
@@ -168,6 +173,7 @@
         android:layout_height="0dp"
         android:padding="25dp"
         android:scaleType="center"
+        android:onClick="navigateToCoronaCount"
         android:src="@drawable/corona_graph"
         app:layout_constraintBottom_toTopOf="@+id/ivFragHomeBuyMask"
         app:layout_constraintDimensionRatio="1"

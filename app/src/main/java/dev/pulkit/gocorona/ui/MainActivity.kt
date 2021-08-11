@@ -49,4 +49,7 @@ class MainActivity : AppCompatActivity() {
         bundle.putSerializable("commentsList",comments)
         navController.navigate(R.id.action_historyMyXRaysFragment_to_myCTScanAllCommentsFragment,bundle)
     }
+    fun navigateToCoronaCount(view: View){
+        navController.navigate(R.id.action_homeFragment_to_covidTrackFragment)
+    }
 }

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.CovidTrackFragment">
+
+    <TextView
+        android:id="@+id/tvCovidCountTextHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/antic"
+        android:padding="10dp"
+        android:text="Covid Count"
+        android:textColor="@color/black_and_white"
+        android:textSize="26sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvActiveHeading"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Active"
+        android:textSize="14sp"
+        android:textColor="@color/black_and_white"
+        android:layout_marginEnd="2dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toStartOf="@id/tvConfirmedHeading"
+        app:layout_constraintTop_toBottomOf="@id/tvCovidCountTextHeading" />
+
+    <TextView
+        android:id="@+id/tvConfirmedHeading"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Confirmed"
+        android:textSize="14sp"
+        android:textColor="@color/black_and_white"
+        android:layout_marginEnd="2dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toStartOf="@id/tvRecoveredHeading"
+        app:layout_constraintTop_toBottomOf="@id/tvCovidCountTextHeading" />
+
+    <TextView
+        android:id="@+id/tvRecoveredHeading"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_and_white"
+        android:text="Recovered"
+        android:textSize="14sp"
+        android:layout_marginEnd="2dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toStartOf="@id/tvDeceasedHeading"
+        app:layout_constraintTop_toBottomOf="@id/tvCovidCountTextHeading" />
+
+    <TextView
+        android:id="@+id/tvDeceasedHeading"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Deceased"
+        android:textColor="@color/black_and_white"
+        android:textSize="14sp"
+        android:layout_marginEnd="3dp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCovidCountTextHeading" />
+
+    <TextView
+        android:id="@+id/tvCovidCountIndiaHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="India"
+        android:textColor="@color/black_and_white"
+        app:layout_constraintTop_toBottomOf="@id/tvActiveHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvActiveHeading"
+        android:layout_marginHorizontal="3dp"/>
+
+    <TextView
+        android:id="@+id/tvIndiaActiveCases"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="55555555"
+        android:textColor="@color/black_and_white"
+        android:gravity="center_vertical|end"
+        app:layout_constraintTop_toTopOf="@id/tvCovidCountIndiaHeading"
+        app:layout_constraintStart_toStartOf="@id/tvActiveHeading"
+        app:layout_constraintEnd_toEndOf="@id/tvActiveHeading"
+        app:layout_constraintBottom_toBottomOf="@id/tvCovidCountIndiaHeading"/>
+    <TextView
+        android:id="@+id/tvIndiaConfirmedCases"
+        android:layout_width="0dp"
+        android:textColor="@color/black_and_white"
+        android:layout_height="0dp"
+        android:text="55555555"
+        android:gravity="center_vertical|end"
+        app:layout_constraintTop_toTopOf="@id/tvCovidCountIndiaHeading"
+        app:layout_constraintStart_toStartOf="@id/tvConfirmedHeading"
+        app:layout_constraintEnd_toEndOf="@id/tvConfirmedHeading"
+        app:layout_constraintBottom_toBottomOf="@id/tvCovidCountIndiaHeading"/>
+    <TextView
+        android:id="@+id/tvIndiaRecoveredCases"
+        android:layout_width="0dp"
+        android:textColor="@color/black_and_white"
+        android:layout_height="0dp"
+        android:text="55555555"
+        android:gravity="center_vertical|end"
+        app:layout_constraintTop_toTopOf="@id/tvCovidCountIndiaHeading"
+        app:layout_constraintStart_toStartOf="@id/tvRecoveredHeading"
+        app:layout_constraintEnd_toEndOf="@id/tvRecoveredHeading"
+        app:layout_constraintBottom_toBottomOf="@id/tvCovidCountIndiaHeading"/>
+    <TextView
+        android:id="@+id/tvIndiaDeceasedCases"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/black_and_white"
+        android:text="55555555"
+        android:gravity="center_vertical|end"
+        app:layout_constraintTop_toTopOf="@id/tvCovidCountIndiaHeading"
+        app:layout_constraintStart_toStartOf="@id/tvDeceasedHeading"
+        app:layout_constraintEnd_toEndOf="@id/tvDeceasedHeading"
+        app:layout_constraintBottom_toBottomOf="@id/tvCovidCountIndiaHeading"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCovidCount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/list_item_covid_state_count"
+        app:layout_constraintTop_toBottomOf="@id/tvCovidCountIndiaHeading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvCovidCountIndiaHeading"
+        app:layout_constraintEnd_toEndOf="@id/tvDeceasedHeading"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
