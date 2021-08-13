@@ -52,4 +52,7 @@ class MainActivity : AppCompatActivity() {
     fun navigateToCoronaCount(view: View){
         navController.navigate(R.id.action_homeFragment_to_covidTrackFragment)
     }
+    fun navigateToVaccineCount(view:View){
+        navController.navigate(R.id.action_homeFragment_to_vaccinationFragment)
+    }
 }

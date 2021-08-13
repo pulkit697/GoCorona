@@ -202,6 +202,7 @@
         android:layout_height="0dp"
         android:padding="25dp"
         android:scaleType="center"
+        android:onClick="navigateToVaccineCount"
         android:src="@drawable/vaccine"
         app:layout_constraintBottom_toTopOf="@+id/ivFragHomeIsolationRequirements"
         app:layout_constraintDimensionRatio="1"

@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_homeFragment_to_covidTrackFragment"
             app:destination="@id/covidTrackFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_vaccinationFragment"
+            app:destination="@id/vaccinationFragment" />
     </fragment>
     <fragment
         android:id="@+id/XRayScanFragment"
@@ -129,6 +132,15 @@
         tools:layout="@layout/fragment_covid_track" >
         <action
             android:id="@+id/action_covidTrackFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vaccinationFragment"
+        android:name="dev.pulkit.gocorona.ui.fragments.VaccinationFragment"
+        android:label="fragment_vaccination"
+        tools:layout="@layout/fragment_vaccination" >
+        <action
+            android:id="@+id/action_vaccinationFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

@@ -9,6 +9,8 @@ import dev.pulkit.gocorona.adapters.CovidCountAdapter
 import dev.pulkit.gocorona.api.covidTracker.CovidClient
 import dev.pulkit.gocorona.models.covidTracker.StatewiseItem
 import kotlinx.android.synthetic.main.fragment_covid_track.*
+import kotlinx.android.synthetic.main.fragment_vaccination.*
+import kotlinx.android.synthetic.main.list_item_covid_state_count.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -19,6 +21,17 @@ class CovidTrackFragment : Fragment(R.layout.fragment_covid_track) {
     var adapter = CovidCountAdapter(listOfStates)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        rvCovidCount.visibility = View.GONE
+        tvActiveHeading.visibility = View.GONE
+        tvRecoveredHeading.visibility = View.GONE
+        tvConfirmedHeading.visibility = View.GONE
+        tvDeceasedHeading.visibility = View.GONE
+        tvCovidCountIndiaHeading.visibility = View.GONE
+        tvIndiaConfirmedCases.visibility = View.GONE
+        tvIndiaActiveCases.visibility = View.GONE
+        tvIndiaRecoveredCases.visibility = View.GONE
+        tvIndiaDeceasedCases.visibility = View.GONE
+        tvCovidLoading.visibility = View.VISIBLE
         rvCovidCount.apply {
             adapter = this@CovidTrackFragment.adapter
             layoutManager = LinearLayoutManager(this@CovidTrackFragment.requireContext())
@@ -32,6 +45,17 @@ class CovidTrackFragment : Fragment(R.layout.fragment_covid_track) {
             val response = withContext(Dispatchers.IO){CovidClient.api.getAllStatesData()}
             if(response.isSuccessful)
             {
+                rvCovidCount.visibility = View.VISIBLE
+                tvActiveHeading.visibility = View.VISIBLE
+                tvRecoveredHeading.visibility = View.VISIBLE
+                tvConfirmedHeading.visibility = View.VISIBLE
+                tvDeceasedHeading.visibility = View.VISIBLE
+                tvCovidCountIndiaHeading.visibility = View.VISIBLE
+                tvIndiaConfirmedCases.visibility = View.VISIBLE
+                tvIndiaActiveCases.visibility = View.VISIBLE
+                tvIndiaRecoveredCases.visibility = View.VISIBLE
+                tvIndiaDeceasedCases.visibility = View.VISIBLE
+                tvCovidLoading.visibility = View.GONE
                 response.body()?.statewise?.let {
                     listOfStates.clear()
                     listOfStates.addAll(it)
