@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,43 +9,8 @@
     android:orientation="vertical"
     tools:context=".ui.fragments.HomeFragment">
 
-    <TextView
-        android:id="@+id/tvFragHomeIndia"
-        style="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="#India"
-        android:textColor="#FF9933"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvFragHomeFights"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/tvFragHomeFights"
-        style="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="fights"
-        android:textColor="#ffffff"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvFragHomeCorona"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvFragHomeIndia"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/tvFragHomeCorona"
-        style="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Corona"
-        android:textColor="#138808"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvFragHomeFights"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include android:id="@+id/layIndiaFightsCorona"
+        layout="@layout/layout_indiafightscorona"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvFragHomeCityCases"
@@ -57,7 +23,7 @@
         app:layout_constraintEnd_toStartOf="@+id/cvFragHomeCountryCases"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFragHomeFights">
+        app:layout_constraintTop_toBottomOf="@id/layIndiaFightsCorona">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -88,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cvFragHomeCityCases"
-        app:layout_constraintTop_toBottomOf="@id/tvFragHomeFights">
+        app:layout_constraintTop_toBottomOf="@id/layIndiaFightsCorona">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -110,13 +76,15 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivFragHomeGetOxygen"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="see nearly availability of oxygen cylinders"
-        android:padding="25dp"
-        android:scaleType="center"
+        android:scaleType="centerCrop"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+
         android:src="@drawable/buy_oxygen"
         app:layout_constraintBottom_toTopOf="@id/glFragHomeHorizontalSeparation"
         app:layout_constraintDimensionRatio="1"
@@ -124,11 +92,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvFragHomeCityCases"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
+        app:civ_border_color="@color/black"
+        app:civ_border_width="2dp"
         />
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivFragHomeHospitalBed"
