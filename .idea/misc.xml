@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/bg_gradient.xml" value="0.207421875" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/drawable/circle_solid_background.xml" value="0.207421875" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/drawable/solid_border.xml" value="0.207421875" />
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/splash_background.xml" value="0.207421875" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/activity_login.xml" value="0.1953125" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_about.xml" value="0.1953125" />
