@@ -10,71 +10,18 @@
     tools:context=".ui.fragments.HomeFragment">
 
     <include android:id="@+id/layIndiaFightsCorona"
-        layout="@layout/layout_indiafightscorona"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvFragHomeCityCases"
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="7dp"
-        app:cardElevation="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/cvFragHomeCountryCases"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layIndiaFightsCorona">
+        android:layout_width="match_parent"
+        layout="@layout/layout_indiafightscorona"
+        />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp">
-
-            <TextView
-                android:id="@+id/tvFragHomeCityCases"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1,30,000"
-                android:textSize="24sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvFragHomeCityCases"
-                android:text="Muzaffarnagar" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvFragHomeCountryCases"
-        android:layout_width="0dp"
+    <include
+        android:id="@+id/layCovidCardsHomeFrag"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="7dp"
-        app:cardElevation="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cvFragHomeCityCases"
-        app:layout_constraintTop_toBottomOf="@id/layIndiaFightsCorona">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp">
-
-            <TextView
-                android:id="@+id/tvFragHomeCountryCases"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1,45,30,000"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvFragHomeCountryCases"
-                android:text="India" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+        layout="@layout/lay_home_covid_cards"
+        app:layout_constraintTop_toBottomOf="@id/layIndiaFightsCorona"
+        />
 
     <ImageView
         android:id="@+id/ivFragHomeGetOxygen"
@@ -90,7 +37,18 @@
         app:layout_constraintEnd_toStartOf="@+id/ivFragHomeHospitalBed"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cvFragHomeCityCases"
+        app:layout_constraintTop_toBottomOf="@id/layCovidCardsHomeFrag"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Oxygen"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomeGetOxygen"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeGetOxygen"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeGetOxygen"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
         />
     <ImageView
         android:id="@+id/ivFragHomeHospitalBed"
@@ -106,7 +64,18 @@
         app:layout_constraintEnd_toStartOf="@id/ivFragHomeCTScan"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivFragHomeGetOxygen"
-        app:layout_constraintTop_toBottomOf="@id/cvFragHomeCityCases"
+        app:layout_constraintTop_toBottomOf="@id/layCovidCardsHomeFrag"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hospital Bed"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomeHospitalBed"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeHospitalBed"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeHospitalBed"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
         />
     <ImageView
         android:id="@+id/ivFragHomeCTScan"
@@ -121,9 +90,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivFragHomeHospitalBed"
-        app:layout_constraintTop_toBottomOf="@id/cvFragHomeCountryCases"
-        app:shapeAppearanceOverlay="@style/ShapeAppearance.CircularImageView" />
-
+        app:layout_constraintTop_toBottomOf="@id/layCovidCardsHomeFrag"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ct Scan Report"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomeCTScan"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeCTScan"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeCTScan"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glFragHomeHorizontalSeparation"
         android:layout_width="match_parent"
@@ -147,6 +126,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Covid Cases"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomeCoronaCount"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeCoronaCount"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeCoronaCount"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        />
     <ImageView
         android:id="@+id/ivFragHomePMReliefFund"
         android:layout_width="0dp"
@@ -161,6 +151,17 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivFragHomeCoronaCount"
         app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PM Relief fund"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomePMReliefFund"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomePMReliefFund"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomePMReliefFund"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
         />
     <ImageView
         android:id="@+id/ivFragHomeBookVaccine"
@@ -178,6 +179,17 @@
         app:layout_constraintStart_toEndOf="@+id/ivFragHomePMReliefFund"
         app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vaccination Count"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomeBookVaccine"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeBookVaccine"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeBookVaccine"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        />
     <ImageView
         android:id="@+id/ivFragHomeBuyMask"
         android:layout_width="0dp"
@@ -193,6 +205,17 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivFragHomeCoronaCount"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mask Guidelines"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomeBuyMask"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeBuyMask"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeBuyMask"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
         />
     <ImageView
         android:id="@+id/ivFragHomeGovtGuidelines"
@@ -210,6 +233,17 @@
         app:layout_constraintStart_toEndOf="@+id/ivFragHomeBuyMask"
         app:layout_constraintTop_toBottomOf="@+id/ivFragHomePMReliefFund"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Govt Guidelines"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomeGovtGuidelines"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeGovtGuidelines"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeGovtGuidelines"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        />
     <ImageView
         android:id="@+id/ivFragHomeIsolationRequirements"
         android:layout_width="0dp"
@@ -226,6 +260,17 @@
         app:layout_constraintStart_toEndOf="@+id/ivFragHomeGovtGuidelines"
         app:layout_constraintTop_toBottomOf="@+id/ivFragHomeBookVaccine"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Isolation Needs"
+        app:layout_constraintTop_toBottomOf="@id/ivFragHomeIsolationRequirements"
+        app:layout_constraintStart_toStartOf="@id/ivFragHomeIsolationRequirements"
+        app:layout_constraintEnd_toEndOf="@id/ivFragHomeIsolationRequirements"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glFragHomeHorizontalBelowGrid"
@@ -234,19 +279,12 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.75" />
 
-    <ImageView
-        android:id="@+id/ivFragHomeSellOxygen"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
-        android:scaleType="center"
-        android:src="@drawable/sell_oxygen"
-        android:background="@drawable/circle_solid_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toEndOf="@id/ivFragHomeGovtGuidelines"
-        app:layout_constraintStart_toStartOf="@id/ivFragHomeGovtGuidelines"
+    <include layout="@layout/lay_reg_for_vaccine"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
         app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalBelowGrid"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

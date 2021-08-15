@@ -10,4 +10,5 @@
     <color name="textColor">#808080</color>
     <color name="blue_and_white">#000080</color>
     <color name="black_and_white">#000000</color>
+    <color name="borderColor">#010101</color>
 </resources>

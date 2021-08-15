@@ -3,4 +3,5 @@
     <color name="black_and_white">#ffffff</color>
     <color name="blue_and_white">#ffffff</color>
     <color name="textColor">#DEFFFFFF</color>
+    <color name="borderColor">#fefefe</color>
 </resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#082265"
+    app:cardCornerRadius="10dp"
+    android:padding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvRegisterForVaccineCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register for "
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            />
+        <TextView
+            android:id="@+id/tvVaccineVaccineCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#Vaccine"
+            android:textColor="#F7AC1A"
+            android:textSize="26sp"
+            app:layout_constraintTop_toTopOf="@id/tvRegisterForVaccineCard"
+            app:layout_constraintBottom_toBottomOf="@id/tvRegisterForVaccineCard"
+            app:layout_constraintStart_toEndOf="@id/tvRegisterForVaccineCard"
+            />
+        <ImageView
+            android:layout_width="26sp"
+            android:layout_height="26sp"
+            android:src="@drawable/ic_open_link_white"
+            app:layout_constraintTop_toTopOf="@id/tvVaccineVaccineCard"
+            app:layout_constraintBottom_toBottomOf="@id/tvVaccineVaccineCard"
+            app:layout_constraintStart_toEndOf="@id/tvVaccineVaccineCard"
+            android:layout_marginStart="5dp"
+            />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/modi_vaccine"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
