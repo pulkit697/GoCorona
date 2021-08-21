@@ -8,6 +8,23 @@
     android:baselineAligned="false"
     tools:context=".ui.fragments.XRayScanFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/antic"
+        android:padding="10dp"
+        android:text="Upload Image"
+        android:textColor="@color/black_and_white"
+        android:textSize="26sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:padding="10dp"
+        android:text="Please click on the camera icon and choose an image from the gallery to upload.\nThe image will be sent over to all the doctors. You can visit the doctors' say and our computer's prediction in the history section"
+        android:textSize="16sp"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_frag_x_ray_dashed_box"
         android:layout_width="fill_parent"

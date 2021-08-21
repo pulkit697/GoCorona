@@ -8,6 +8,7 @@
     android:layout_margin="5dp"
     app:cardBackgroundColor="#082265"
     app:cardCornerRadius="10dp"
+    android:onClick="registerVaccine"
     android:padding="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout

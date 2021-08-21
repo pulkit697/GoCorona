@@ -5,17 +5,11 @@
         android:title="Home"
         android:icon="@drawable/stay_at_home"/>
     <item
-        android:id="@+id/XRayScanFragment"
-        android:title="Scan CT Scan"
-        android:icon="@drawable/x_ray_black"
-        android:visible="true"/>
+        android:title=""
+        />
     <item
         android:id="@+id/XRayReviewFragment"
         android:title="Review CT scans"
         android:icon="@drawable/review"
         android:visible="true"/>
-    <item
-        android:id="@+id/aboutFragment"
-        android:title="About us"
-        android:icon="@drawable/about"/>
 </menu>
