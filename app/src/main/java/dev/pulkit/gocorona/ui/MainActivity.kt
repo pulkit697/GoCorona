@@ -1,5 +1,7 @@
 package dev.pulkit.gocorona.ui
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -54,5 +56,11 @@ class MainActivity : AppCompatActivity() {
     }
     fun navigateToVaccineCount(view:View){
         navController.navigate(R.id.action_homeFragment_to_vaccinationFragment)
+    }
+    fun donate(view: View){
+        Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse("https://www.pmcares.gov.in/en/")
+            startActivity(this)
+        }
     }
 }

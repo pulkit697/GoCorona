@@ -18,97 +18,18 @@
     <include
         android:id="@+id/layCovidCardsHomeFrag"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/lay_home_covid_cards"
+        android:layout_height="180dp"
+        android:layout_marginTop="5dp"
+        layout="@layout/layout_sliders_homefrag"
         app:layout_constraintTop_toBottomOf="@id/layIndiaFightsCorona"
         />
 
-    <ImageView
-        android:id="@+id/ivFragHomeGetOxygen"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="see nearly availability of oxygen cylinders"
-        android:scaleType="center"
-        android:layout_margin="@dimen/upper_imageview_margin"
-        android:background="@drawable/circle_solid_background"
-        android:src="@drawable/buy_oxygen"
-        app:layout_constraintBottom_toTopOf="@id/glFragHomeHorizontalSeparation"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/ivFragHomeHospitalBed"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layCovidCardsHomeFrag"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buy Oxygen"
-        app:layout_constraintTop_toBottomOf="@id/ivFragHomeGetOxygen"
-        app:layout_constraintStart_toStartOf="@id/ivFragHomeGetOxygen"
-        app:layout_constraintEnd_toEndOf="@id/ivFragHomeGetOxygen"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/textColor"
-        android:textSize="14sp"
-        />
-    <ImageView
-        android:id="@+id/ivFragHomeHospitalBed"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="check availability of vacant hospitals beds nearby"
-        android:layout_margin="@dimen/upper_imageview_margin"
-        android:background="@drawable/circle_solid_background"
-        android:scaleType="center"
-        android:src="@drawable/hospital_bed"
-        app:layout_constraintBottom_toTopOf="@id/glFragHomeHorizontalSeparation"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@id/ivFragHomeCTScan"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ivFragHomeGetOxygen"
-        app:layout_constraintTop_toBottomOf="@id/layCovidCardsHomeFrag"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hospital Bed"
-        app:layout_constraintTop_toBottomOf="@id/ivFragHomeHospitalBed"
-        app:layout_constraintStart_toStartOf="@id/ivFragHomeHospitalBed"
-        app:layout_constraintEnd_toEndOf="@id/ivFragHomeHospitalBed"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/textColor"
-        android:textSize="14sp"
-        />
-    <ImageView
-        android:id="@+id/ivFragHomeCTScan"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/upper_imageview_margin"
-        android:background="@drawable/circle_solid_background"
-        android:scaleType="center"
-        android:src="@drawable/ct_scan"
-        app:layout_constraintBottom_toTopOf="@id/glFragHomeHorizontalSeparation"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ivFragHomeHospitalBed"
-        app:layout_constraintTop_toBottomOf="@id/layCovidCardsHomeFrag"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ct Scan Report"
-        app:layout_constraintTop_toBottomOf="@id/ivFragHomeCTScan"
-        app:layout_constraintStart_toStartOf="@id/ivFragHomeCTScan"
-        app:layout_constraintEnd_toEndOf="@id/ivFragHomeCTScan"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/textColor"
-        android:textSize="14sp"
-        />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glFragHomeHorizontalSeparation"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <ImageView
         android:id="@+id/ivFragHomeCoronaCount"
@@ -143,6 +64,7 @@
         android:layout_height="0dp"
         android:layout_margin="@dimen/middle_imageview_margin"
         android:scaleType="center"
+        android:onClick="donate"
         android:src="@drawable/india"
         android:background="@drawable/circle_solid_background"
         app:layout_constraintBottom_toTopOf="@+id/ivFragHomeGovtGuidelines"
@@ -277,7 +199,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <include layout="@layout/lay_reg_for_vaccine"
         android:layout_height="wrap_content"

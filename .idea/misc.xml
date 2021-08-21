@@ -21,8 +21,10 @@
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/lay_home_covid_cards.xml" value="0.176" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/lay_reg_for_vaccine.xml" value="0.2" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/layout_indiafightscorona.xml" value="0.1953125" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/layout_sliders_homefrag.xml" value="0.1953125" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_comment.xml" value="0.4" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_covid_state_count.xml" value="0.264" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_slider_view.xml" value="0.1953125" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_vaccine_rv.xml" value="0.165625" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_view_history_x_rays.xml" value="0.2" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/list_item_view_review_scan.xml" value="0.1953125" />
