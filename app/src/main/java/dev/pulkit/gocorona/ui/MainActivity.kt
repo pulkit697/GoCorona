@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         if (fragment is HomeFragment){
             navController.navigate(R.id.action_homeFragment_to_XRayScanFragment)
         }else{
-            navController.navigate(R.id.action_aboutFragment_to_XRayScanFragment)
+            navController.navigate(R.id.action_XRayReviewFragment_to_XRayScanFragment)
         }
     }
 

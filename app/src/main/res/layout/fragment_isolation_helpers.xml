@@ -22,6 +22,7 @@
             android:padding="10dp"
             android:background="@drawable/petal_shape">
             <TextView
+                android:id="@+id/tvOpenConsultDoctor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Consult a doctor"
@@ -34,19 +35,22 @@
                 android:layout_height="wrap_content"
                 >
                 <RadioButton
+                    android:id="@+id/rbApollo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:text="Apollo"/>
                 <RadioButton
+                    android:id="@+id/rbPracto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Practo"/>
                 <RadioButton
+                    android:id="@+id/rbDocsApp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="DocsApp"/>
                 <RadioButton
+                    android:id="@+id/rbConsultDoctor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Others"/>
@@ -61,6 +65,7 @@
             android:padding="10dp"
             android:background="@drawable/petal_shape">
             <TextView
+                android:id="@+id/tvOpenYogaAndFitness"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Yoga And Fitness"
@@ -73,19 +78,22 @@
                 android:layout_height="wrap_content"
                 >
                 <RadioButton
+                    android:id="@+id/rbCultFit"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:text="Cult.Fit"/>
                 <RadioButton
+                    android:id="@+id/rbGlo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Glo"/>
                 <RadioButton
+                    android:id="@+id/rbYogaTrackYoga"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Yoga - Track Yoga"/>
                 <RadioButton
+                    android:id="@+id/rbYogaAndFitnessOnline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Others"/>
@@ -100,6 +108,7 @@
             android:padding="10dp"
             android:background="@drawable/petal_shape">
             <TextView
+                android:id="@+id/tvOpenMedicinalItems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Medicinal Items"
@@ -112,19 +121,22 @@
                 android:layout_height="wrap_content"
                 >
                 <RadioButton
+                    android:id="@+id/rbNetMeds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:text="NetMeds"/>
                 <RadioButton
+                    android:id="@+id/rbPharmeasy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="PharmEasy"/>
                 <RadioButton
+                    android:id="@+id/rb1Mg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1mg"/>
                 <RadioButton
+                    android:id="@+id/rbMedicinesOnline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Others"/>
@@ -139,6 +151,7 @@
         android:padding="10dp"
         android:background="@drawable/petal_shape">
         <TextView
+            android:id="@+id/tvOpenFruitsAndVegetables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fruits and Vegetables"
@@ -151,19 +164,22 @@
             android:layout_height="wrap_content"
             >
             <RadioButton
+                android:id="@+id/rbBigBasket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="Big Basket"/>
             <RadioButton
+                android:id="@+id/rbGrofers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Grofers"/>
             <RadioButton
+                android:id="@+id/rbSpencers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Spencers"/>
             <RadioButton
+                android:id="@+id/rbFruitsAndVegetablesOnline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Others"/>
@@ -178,6 +194,7 @@
             android:padding="10dp"
             android:background="@drawable/petal_shape">
             <TextView
+                android:id="@+id/tvOpenGrocery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="grocery"
@@ -190,19 +207,22 @@
                 android:layout_height="wrap_content"
                 >
                 <RadioButton
+                    android:id="@+id/rbAmazonPantry"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:text="Amazon Pantry"/>
                 <RadioButton
+                    android:id="@+id/rbFlipkartGrocery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Flipkart Grocery"/>
                 <RadioButton
+                    android:id="@+id/rbJioMart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Jio Mart"/>
                 <RadioButton
+                    android:id="@+id/rbGroceryOnline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Others"/>
@@ -217,6 +237,7 @@
             android:padding="10dp"
             android:background="@drawable/petal_shape">
             <TextView
+                android:id="@+id/tvOpenCookedFood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cooked Food"
@@ -231,7 +252,6 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:text="Swiggy"/>
                 <RadioButton
                     android:layout_width="match_parent"
@@ -256,6 +276,7 @@
             android:padding="10dp"
             android:background="@drawable/petal_shape">
             <TextView
+                android:id="@+id/tvOpenDeliverAnything"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Get/Deliver Anything"
@@ -270,7 +291,6 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:text="Swiggy Genie"/>
                 <RadioButton
                     android:layout_width="match_parent"
@@ -291,6 +311,7 @@
             android:padding="10dp"
             android:background="@drawable/petal_shape">
             <TextView
+                android:id="@+id/tvOpenSalonAndRepair"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Salon/Clean/Repair Services"
@@ -305,7 +326,6 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:text="Urban Company"/>
                 <RadioButton
                     android:layout_width="match_parent"

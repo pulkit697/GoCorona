@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:text="Comments"
+        android:padding="10dp"
         android:fontFamily="@font/antic"
         app:layout_constraintTop_toTopOf="parent"/>
 
