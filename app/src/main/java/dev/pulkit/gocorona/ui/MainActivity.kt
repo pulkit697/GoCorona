@@ -20,9 +20,7 @@ import dev.pulkit.gocorona.ui.fragments.XRayScanFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_x_ray_scan.*
 import android.content.res.ColorStateList
-
-
-
+import dev.pulkit.gocorona.ui.fragments.AboutFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,7 +31,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        amIDoctor = this.getPreferences(Context.MODE_PRIVATE).getBoolean(getString(R.string.areyoudoctor),false)
+        ivTopBarIcon.setOnClickListener { setUpBackButton() }
+        amIDoctor = this.getSharedPreferences("SharedPref",Context.MODE_PRIVATE).getBoolean(getString(R.string.areyoudoctor),false)
         navController = fragMainActivity.findNavController()
         bnb_main.background = null
         bnb_main.itemIconTintList = ColorStateList(
@@ -48,9 +47,14 @@ class MainActivity : AppCompatActivity() {
         bnb_main.setupWithNavController(navController)
         val listOfFragsWithNavBar = listOf(R.id.homeFragment,R.id.XRayReviewFragment,R.id.XRayScanFragment,R.id.aboutFragment)
         navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.homeFragment){
+                ivTopBarIcon.setImageResource(R.mipmap.app_icon)
+            }else{
+                ivTopBarIcon.setImageResource(R.drawable.ic_arrow_back)
+            }
             if (destination.id in listOfFragsWithNavBar){
                 cl_bottom_bar_main.visibility = View.VISIBLE
-                if(destination.id == R.id.XRayScanFragment){
+                if(destination.id == R.id.XRayScanFragment || destination.id == R.id.XRayReviewFragment){
                     fabBottomBar.setImageResource(R.drawable.xray_white)
                     fabBottomBar.setColorFilter(Color.WHITE)
                 }else{
@@ -61,7 +65,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    fun navigateToXrayScanFragment(view: View){
+
+    private fun setUpBackButton(){
+        val navHostFragment = supportFragmentManager.primaryNavigationFragment
+        val fragment = navHostFragment?.childFragmentManager?.fragments?.get(0)
+        if(fragment is HomeFragment){
+            navController.navigate(R.id.action_homeFragment_to_aboutFragment)
+        }else{
+            onBackPressed()
+        }
+    }
+    fun navigateToXrayFragments(view: View){
         bnb_main.uncheckAllItems()
         val navHostFragment = supportFragmentManager.primaryNavigationFragment
         val fragment = navHostFragment?.childFragmentManager?.fragments?.get(0)
@@ -71,7 +85,7 @@ class MainActivity : AppCompatActivity() {
             }else {
                 navController.navigate(R.id.action_homeFragment_to_XRayScanFragment)
             }
-        }else{
+        }else if(fragment is AboutFragment){
             if(amIDoctor){
                 navController.navigate(R.id.action_aboutFragment_to_XRayReviewFragment)
             }else {
@@ -79,7 +93,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     fun navigateToHistoryFragment(view:View) {
         navController.navigate(R.id.action_XRayScanFragment_to_historyMyXRaysFragment)
     }
@@ -123,4 +136,5 @@ class MainActivity : AppCompatActivity() {
         }
         menu.setGroupCheckable(0, true, true)
     }
+
 }

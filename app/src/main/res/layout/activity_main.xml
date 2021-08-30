@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     tools:context=".ui.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,6 +15,7 @@
         android:background="@color/black"
         android:orientation="horizontal">
         <ImageView
+            android:id="@+id/ivTopBarIcon"
             android:layout_width="?attr/actionBarSize"
             android:layout_height="?attr/actionBarSize"
             android:src="@mipmap/app_icon"
@@ -66,7 +66,7 @@
             android:id="@+id/fabBottomBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="navigateToXrayScanFragment"
+            android:onClick="navigateToXrayFragments"
             android:src="@drawable/x_ray_black"
             app:layout_anchor="@id/bab_main"
             android:backgroundTint="@color/purple_700"

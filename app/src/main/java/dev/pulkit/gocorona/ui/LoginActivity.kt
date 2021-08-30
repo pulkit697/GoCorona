@@ -75,10 +75,11 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 pbActivityLogin.visibility = View.GONE
                 llActivityLogin.isEnabled = true
-                val sharedPref = this.getPreferences(Context.MODE_PRIVATE)
+                val sharedPref = this.getSharedPreferences("SharedPref",Context.MODE_PRIVATE)
                 with(sharedPref.edit()){
                     putBoolean(getString(R.string.areyoudoctor),cbAreYouDoctor.isChecked)
-                    apply()
+                    Log.d("pulkit","am i a doctor?" + cbAreYouDoctor.isChecked)
+                    commit()
                 }
                 if(task.isSuccessful){
                     Intent(this,MainActivity::class.java).let {
