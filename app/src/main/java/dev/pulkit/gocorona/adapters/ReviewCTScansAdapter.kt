@@ -24,7 +24,7 @@ class ReviewCTScansAdapter(private val list:List<CTScanPost>):RecyclerView.Adapt
     class ReviewViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
         lateinit var result: String
         fun onBind(post:CTScanPost){
-            Glide.with(itemView).load(post.imageUrl).error(R.drawable.loading_image).into(itemView.ivCTScanPostReviewFrag)
+            Glide.with(itemView).load(post.imageUrl).error(R.drawable.sample_ct_scan).into(itemView.ivCTScanPostReviewFrag)
             result = "all okay"
             itemView.apply {
                 btAllOkayReviewFrag.setOnClickListener {
