@@ -53,6 +53,7 @@
         android:inputType="textPersonName"
         />
     <CheckBox
+        android:id="@+id/cbAreYouDoctor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Are you a corona specialist doctor?"

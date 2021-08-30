@@ -1,5 +1,6 @@
 package dev.pulkit.gocorona.ui
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -74,6 +75,11 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 pbActivityLogin.visibility = View.GONE
                 llActivityLogin.isEnabled = true
+                val sharedPref = this.getPreferences(Context.MODE_PRIVATE)
+                with(sharedPref.edit()){
+                    putBoolean(getString(R.string.areyoudoctor),cbAreYouDoctor.isChecked)
+                    apply()
+                }
                 if(task.isSuccessful){
                     Intent(this,MainActivity::class.java).let {
                         it.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

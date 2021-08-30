@@ -8,8 +8,8 @@
         android:title=""
         />
     <item
-        android:id="@+id/XRayReviewFragment"
-        android:title="Review CT scans"
+        android:id="@+id/aboutFragment"
+        android:title="About Us"
         android:icon="@drawable/review"
         android:visible="true"/>
 </menu>

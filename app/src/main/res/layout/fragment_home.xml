@@ -23,6 +23,78 @@
         layout="@layout/layout_sliders_homefrag"
         app:layout_constraintTop_toBottomOf="@id/layIndiaFightsCorona"
         />
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layGetTestedHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layCovidCardsHomeFrag"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#FFD600"
+        app:cardCornerRadius="10dp"
+        android:onClick="registerVaccine"
+        android:padding="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvGet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/aldrich"
+                android:text="Get "
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toStartOf="@id/tvCTScanCard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCTScanCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/antic"
+                android:text="CT Scan"
+                android:textColor="#6200EA"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tvGet"
+                app:layout_constraintEnd_toStartOf="@id/tvTested"
+                app:layout_constraintStart_toEndOf="@id/tvGet"
+                app:layout_constraintTop_toTopOf="@id/tvGet" />
+
+            <TextView
+                android:id="@+id/tvTested"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text=" Tested"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                app:layout_constraintStart_toEndOf="@id/tvCTScanCard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivCTScanCard"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/ivCTScanCard"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ct_scan_colored_outline"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glFragHomeHorizontalSeparation"
@@ -45,7 +117,7 @@
         app:layout_constraintEnd_toStartOf="@+id/ivFragHomePMReliefFund"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation"
+        app:layout_constraintTop_toBottomOf="@id/layGetTestedHome"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -72,7 +144,7 @@
         app:layout_constraintEnd_toStartOf="@+id/ivFragHomeBookVaccine"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivFragHomeCoronaCount"
-        app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation"
+        app:layout_constraintTop_toBottomOf="@id/layGetTestedHome"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -99,7 +171,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/ivFragHomePMReliefFund"
-        app:layout_constraintTop_toBottomOf="@id/glFragHomeHorizontalSeparation"
+        app:layout_constraintTop_toBottomOf="@id/layGetTestedHome"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -199,9 +271,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.80" />
 
-    <include layout="@layout/lay_reg_for_vaccine"
+    <include
+        android:id="@+id/layModiVaccineHome"
+        layout="@layout/lay_reg_for_vaccine"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_margin="10dp"

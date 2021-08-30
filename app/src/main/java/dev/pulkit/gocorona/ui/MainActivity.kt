@@ -1,5 +1,6 @@
 package dev.pulkit.gocorona.ui
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
@@ -27,9 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var navController:NavController
 
+    private var amIDoctor = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        amIDoctor = this.getPreferences(Context.MODE_PRIVATE).getBoolean(getString(R.string.areyoudoctor),false)
         navController = fragMainActivity.findNavController()
         bnb_main.background = null
         bnb_main.itemIconTintList = ColorStateList(
@@ -62,9 +66,17 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.primaryNavigationFragment
         val fragment = navHostFragment?.childFragmentManager?.fragments?.get(0)
         if (fragment is HomeFragment){
-            navController.navigate(R.id.action_homeFragment_to_XRayScanFragment)
+            if(amIDoctor){
+                navController.navigate(R.id.action_homeFragment_to_XRayReviewFragment)
+            }else {
+                navController.navigate(R.id.action_homeFragment_to_XRayScanFragment)
+            }
         }else{
-            navController.navigate(R.id.action_XRayReviewFragment_to_XRayScanFragment)
+            if(amIDoctor){
+                navController.navigate(R.id.action_aboutFragment_to_XRayReviewFragment)
+            }else {
+                navController.navigate(R.id.action_aboutFragment_to_XRayScanFragment)
+            }
         }
     }
 
