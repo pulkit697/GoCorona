@@ -6,6 +6,7 @@
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/bg_gradient.xml" value="0.207421875" />
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/circle_solid_background.xml" value="0.207421875" />
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/dotted_border.xml" value="0.207421875" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/drawable/ic_arrow_back.xml" value="0.207421875" />
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/petal_shape.xml" value="0.20501930501930501" />
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/solid_border.xml" value="0.207421875" />
         <entry key="..\:/android/GoCorona/app/src/main/res/drawable/splash_background.xml" value="0.207421875" />
@@ -18,7 +19,7 @@
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_isolation_helpers.xml" value="0.1953125" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_my_c_t_scan_all_comments.xml" value="0.176" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_vaccination.xml" value="0.165625" />
-        <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_x_ray_review.xml" value="0.1953125" />
+        <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_x_ray_review.xml" value="0.16799999999999998" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/fragment_x_ray_scan.xml" value="0.19305019305019305" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/lay_home_covid_cards.xml" value="0.176" />
         <entry key="..\:/android/GoCorona/app/src/main/res/layout/lay_reg_for_vaccine.xml" value="0.2" />

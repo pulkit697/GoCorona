@@ -17,11 +17,33 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text = "We are a group of softwar engineers and data scientists who have worked together to build an application that can help people survive if the 3rd wave of Corona hits.\n There are a lot of functionalities that are still left from being added, but soon will be made available to you."
+        android:layout_height="wrap_content"
+        android:text = "This is an open source application that can help people survive if the 3rd wave of Corona hits.\n This app has been built by students of Jaypee Institute of Information Technology Noida.\n\n The developer team includes:\n Pulkit garg                  Android Developer\n Prashant Kartikay\t    ML Engineer\n\n The application has been built under the supervision of Mr. Ankit Vidyarthi.\n\n Please feel free to conribute to the application:"
         android:padding="10dp"
         android:textSize="18sp"
         android:fontFamily="@font/alike"
+        />
+    <TextView
+        android:id="@+id/tvGithubBackend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/aldrich"
+        android:text="@string/backend_api_link"
+        android:clickable="true"
+        android:onClick="githubBackend"
+        />
+    <TextView
+        android:id="@+id/tvGithubAndroid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/aldrich"
+        android:text="@string/frontend_link"
+        android:clickable="true"
+        android:onClick="githubAndroid"
         />
 
 </LinearLayout>

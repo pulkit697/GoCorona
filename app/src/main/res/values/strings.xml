@@ -19,4 +19,6 @@
     close facial fit.
 </string>
     <string name="areyoudoctor">Am I a Doctor?</string>
+    <string name="backend_api_link">\u2022 <u>Backend APIs</u></string>
+    <string name="frontend_link">\u2022 <u>Android App</u></string>
 </resources>

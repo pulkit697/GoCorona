@@ -123,6 +123,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(this)
         }
     }
+    fun githubBackend(view: View){
+        Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse("https://github.com/pulkit697/GoCoronaBackend")
+            startActivity(this)
+        }
+    }
+    fun githubAndroid(view: View){
+        Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse("https://github.com/pulkit697/gocorona")
+            startActivity(this)
+        }
+    }
     fun registerVaccine(view:View){
         Intent(Intent.ACTION_VIEW).apply {
             data = Uri.parse("https://selfregistration.cowin.gov.in/selfregistration")
